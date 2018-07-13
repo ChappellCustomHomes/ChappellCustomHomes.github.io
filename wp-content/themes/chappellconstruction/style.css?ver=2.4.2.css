@@ -1,0 +1,254 @@
+/*
+  Theme Name: Chappell Construction
+  Description: The custom theme for Chappell Construction, it is build ontop of the genesis theme.
+  Author: Nigel Banks
+  Author URI: http://www.nigelbanks.ca
+  Template: genesis
+  Version: 1.0
+  Tags: black, orange, white, one-column, two-columns, three-columns, left-sidebar, right-sidebar, fixed-width, custom-menu, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+  License: GPL-2.0+
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/**
+ * Get the parent theme.
+ */
+@import url("../genesis/style.css");
+
+/**
+ * Do not highlight everything the user clicks on.
+ */
+::-moz-selection {
+    background-color: inherit;
+    color: inherit;
+}
+::selection {
+    background-color: inherit;
+    color: inherit;
+}
+
+/**
+ * Layout
+ */
+body, .site-header, .site-footer, .footer-widgets {
+    background-color: black;
+    text-align: left;
+    color: #fff;
+    border: none;
+}
+.site-header .wrap, .site-footer .wrap {
+    padding: 0;
+}
+.site-footer .wrap img {
+    width: 360px;
+}
+.nav-primary {
+    background-color:rgba(0,0,0,0.3);
+    border-bottom: none;
+    text-transform:uppercase;
+    font-weight: bold;
+    text-align: left;
+}
+.widget-title, .footer-widgets .widget-title {
+    font-size: 1.5em;
+    color: #333;
+}
+.widget {
+    color: white;
+}
+
+.entry {
+    background-color: inherit;
+    margin: 0px;
+    padding: 0px;
+}
+
+.entry-content a {
+    border: none;
+    color: #008de9;
+}
+
+#nav-logo {
+    height: 48px;
+    width: 48px;
+    float: right;
+    background: url( 'images/logo-icon.png' ) no-repeat;
+    background-size: contain;
+    background-position: center;
+    vertical-align: middle;
+}
+
+/* Widgets ------------------*/
+.sidebar .widget {
+    background-color: #0e0e0e;
+    border-radius: 3px;
+    padding: 1em;
+}
+
+/* Residence Selector Widget */
+#residence-selector, #residence-selector a {
+    text-transform:uppercase;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    color: #333;
+}
+#residence-selector .current {
+    color: #008de9;
+}
+
+/* Responsive Menu */
+@media only screen and (max-width: 550px) {
+    #menu-main li {
+	display: block;
+    }
+}
+
+/* Make sure main menu re-appears when scaled up */
+@media only screen and (min-width: 551px) {
+    #menu-main {
+	display: block !important;
+    }
+}
+
+
+/* Mobile Devices ----------- */
+@media only screen
+and (max-width : 700px) {
+    #nav-logo {
+        display: none;
+    }
+}
+
+/**
+ * Navigation
+ */
+body:not(.home) .genesis-nav-menu {
+    background-color:rgba(0,0,0,0.3);
+    text-transform:uppercase;
+    text-align: left;
+    float: left;
+    width: auto;
+}
+
+body:not(.home) .genesis-nav-menu a {
+    padding: 1.0rem 2.4rem;
+}
+
+.genesis-nav-menu a,
+.genesis-nav-menu a:hover,
+.genesis-nav-menu .current-menu-item > a,  
+.genesis-nav-menu .current-menu-item > a:hover {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.genesis-nav-menu .current-menu-item > a,
+.genesis-nav-menu .current-page-ancestor > a {
+    color: #fde152;
+}
+
+/**
+ * Details
+ */
+#location {
+    text-transform: uppercase;
+    color: #999;
+}
+#location + div {
+    color: #fff;
+}
+#location + div {
+    color: #fff;
+}
+.designed_by-field a {
+    text-transform:uppercase;
+    font-weight: bold;
+    border: none;
+    color: #008de9;
+}
+
+/*****************************************************
+ * generic styling for ALS elements: outer container
+ ******************************************************/
+
+.als-container {
+    width: 100%;
+    margin: 0px auto;
+    z-index: 0;
+}
+
+/****************************************
+ * viewport styling
+ ***************************************/
+
+.als-viewport {
+    position: relative;
+    overflow: hidden;
+    margin: 0px auto;
+}
+
+/***************************************************
+ * wrapper styling
+ **************************************************/
+
+.als-wrapper {
+    position: relative;
+    /* if you are using a list with <ul> <li> */
+    list-style: none;
+}
+
+/*************************************
+ * item: single list element
+ ************************************/
+
+.als-item {
+    position: relative;
+    display: block;
+    text-align: left;
+    min-width: 100%;
+    cursor: pointer;
+    float: left;
+}
+
+/***********************************************
+ * prev, next: buttons styling
+ **********************************************/
+
+.als-prev, .als-next {
+    cursor: pointer;
+    float: right;
+    position: relative;
+    margin-top: -27px;
+}
+.als-prev {
+    margin-right: 2em;
+}
+
+
+/* Background */
+div.rsDefault,
+div.rsDefault div.rsOverflow,
+div.rsDefault div.rsSlide,
+div.rsDefault div.rsVideoFrameHolder,
+div.rsDefault div.rsThumbs {
+    background: #090909;
+    color: #FFF;
+}
+div.rsDefault .rsThumb.rsNavSelected {
+    background: inherit;
+}
+
+/* Hide Contact Image on mobile */
+@media only screen and (max-width: 1023px) {
+    .collapsed-hide {
+        display: none;
+    }
+}
